@@ -1,0 +1,27 @@
+version: '3.2'
+
+services:
+
+#================================================================================================
+# JENKINS
+#================================================================================================
+  jenkins:
+    restart: unless-stopped
+    build:
+      context: .
+    container_name: nakama_jenkins
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/jenkins:/var/jenkins_home
+    environment:
+      - JAVA_OPTS="-Djava.awt.headless=true"
+      - JENKINS_VERSION=2.135
+      - JENKINS_SHA=d682c43b381898fde9ace47892bdf9277ed2389f15299356e20e1a85720cdeb0
+      - TINI_VERSION=0.18.0
+      - TINI_SHA=50a5bb62e3c4fdfb442da6d1530abb2b6afacc24
+    ports:
+      - "${JENKINS_MASTER_PORT:-9401}:8080"
+      - "${JENKINS_SLAVE_PORT:-9402}:50000" 
+    # Allow Docker In Docker
+    privileged: true     
