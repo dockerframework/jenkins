@@ -10,7 +10,7 @@ services:
 env:
   global:
     - COMMIT=${TRAVIS_COMMIT::8}
-    - REPO=dockerframework/jenkins:2.135
+    - REPO=dockerframework/jenkins:2.138
     - CGO_ENABLED=0
     - GOOS=linux
     - GOARCH=amd64
