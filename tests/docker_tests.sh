@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOCKER_IMAGE="dockerframework/jenkins"
-DOCKER_TAG="2.138"
+DOCKER_TAG="2.140"
 
 #### Halt script on error
 set -e

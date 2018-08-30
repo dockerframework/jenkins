@@ -16,8 +16,8 @@ services:
       - ./data/jenkins:/var/jenkins_home
     environment:
       - JAVA_OPTS="-Djava.awt.headless=true"
-      - JENKINS_VERSION=2.135
-      - JENKINS_SHA=d682c43b381898fde9ace47892bdf9277ed2389f15299356e20e1a85720cdeb0
+      - JENKINS_VERSION=2.140
+      - JENKINS_SHA=9ea64d845190e9fc088c762ba1ea1645c5b7e09df26a1d67def130612d91153c
       - TINI_VERSION=0.18.0
       - TINI_SHA=50a5bb62e3c4fdfb442da6d1530abb2b6afacc24
     ports:
