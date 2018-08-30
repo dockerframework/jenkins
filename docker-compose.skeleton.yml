@@ -17,7 +17,7 @@ services:
     environment:
       - JAVA_OPTS=${JAVA_OPTS}
       - JENKINS_VERSION=${JENKINS_VERSION:-2.138}
-      - JENKINS_SHA=${JENKINS_SHA:-e1c280f1241999c9c7795a8ea3e5346debeb6be5e26744c13b03bc494dcef56c}
+      - JENKINS_SHA=${JENKINS_SHA:-e1c280f1241999c9c7795a8ea3e5346debeb6be5e26744c13b03bc494dcef56cs}
       - TINI_VERSION=${TINI_VERSION:-0.18.0}
       - TINI_SHA=${TINI_SHA:-50a5bb62e3c4fdfb442da6d1530abb2b6afacc24}
     ports:
